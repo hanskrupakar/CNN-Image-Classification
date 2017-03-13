@@ -95,12 +95,8 @@ if(gpu=='y' or gpu=='Y'):
             acc = sess.run(accuracy, feed_dict={x: inp, y: out})
             # Calculate batch loss
             loss = sess.run(cost, feed_dict={x: inp, y: out})
-            print "Iter " + str(step*1200) + ", Minibatch Loss= " + \
-                  "{:.6f}".format(loss) + ", Training Accuracy= " + \
-                  "{:.5f}".format(acc)
+            print "Iteration= " + str(step*1200) + ", Minibatch Loss= {:.6f}".format(loss) + ", Training Accuracy= " + {:.5f}".format(acc)
             step += 1
-        print "Optimization Finished!"
-
+            
         flag=0
-        print "Testing Accuracy:", \
-            sess.run(accuracy, feed_dict={x: inp_test, y: out_test})
+        print "Testing Accuracy:", sess.run(accuracy, feed_dict={x: inp_test, y: out_test})
